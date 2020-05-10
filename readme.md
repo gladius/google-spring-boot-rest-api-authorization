@@ -1,6 +1,10 @@
 # Spring boot google oauth authentication
 
-This **Spring Boot Starter** can be your ready to use middleware server for your Flutter, React Native, Native Mobile or Web Frontends projects with **Spring Security** to seamlessly create and use protected rest API's.
+This **Spring Boot Starter** can be your ready to use middleware server for your Flutter, React Native, Native Mobile or Web Frontends projects with **Spring Security** to seamlessly create and consume protected rest API's.
+
+Note:-
+
+This server does not use spring security's Oauth2 social library but rather uses google's api client in combination with spring security's http security functionality to provide a simple yet secure authorization solution.
 
 ### Configuration
 
