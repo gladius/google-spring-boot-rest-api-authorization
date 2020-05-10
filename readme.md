@@ -1,23 +1,23 @@
 # Spring boot google oauth authentication
 
-This **Spring Boot Starter** is perfect for such situations when you want to extend firebase's authentication menchanism with **Spring Security** to seamlessly create and use protected rest API's.
+This **Spring Boot Starter** can be your ready to use middleware server for your Flutter, React Native, Native Mobile or Web Frontends projects with **Spring Security** to seamlessly create and use protected rest API's.
 
 ### Configuration
 
 Register your application at https://console.developers.google.com and create creantials.
 
-security.google-props.client-ids accepts an array of client_ids you can have one for each platform like IOS,WEB,ANDROID.
+security.google-props.client-ids accepts an array of client_ids, you configure one for each platform like IOS,WEB,ANDROID.
 
 ### Protected API
 
-![Image of Protected API ](https://raw.githubusercontent.com/gladius-thayalarajan/firebase-spring-boot-rest-api-authentication/master/screenshots/protected_api.png)
+![Image of Protected API ](https://raw.githubusercontent.com/gladius/google-spring-boot-rest-api-authorization/master/screenshots/ui.png)
 
 ## Author
 
 👤 **Gladius Thayalarajan**
 
 - Website: thepro.io/@/gladius
-- Github: [@gladius-thayalarajan](https://github.com/gladius-thayalarajan)
+- Follow me @ Github: [@gladius-thayalarajan](https://github.com/gladius)
 
 ## Show your support
 
