@@ -9,11 +9,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.comicaly</groupId>
+	<groupId>io.thepro</groupId>
 	<artifactId>apiservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>comicaly server</name>
-	<description>Comicaly API Service</description>
+	<description>Google Auth Backend API Service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
