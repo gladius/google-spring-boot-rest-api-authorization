@@ -1,0 +1,38 @@
+server:
+   port: 8090
+security:
+   google-props:
+      client-ids:
+       - ${WEB_CLIENT_ID}
+   allow-credentials: true
+   allowed-origins:
+   - http://localhost:9091
+   allowed-methods:
+   - GET
+   - POST
+   - PUT
+   - PATCH
+   - DELETE
+   - OPTIONS
+   allowed-headers:
+   - Authorization
+   - Origin
+   - Content-Type
+   - Accept
+   - Accept-Encoding
+   - Accept-Language
+   - Access-Control-Allow-Origin
+   - Access-Control-Allow-Headers
+   - Access-Control-Request-Method
+   - X-Requested-With
+   - X-Auth-Token
+   - X-Xsrf-Token
+   - Cache-Control
+   - Id-Token
+   allowed-public-apis:
+   - /favicon.ico
+   - /session/login
+   - /public/*
+   exposed-headers:
+   - X-Auth-Token
+   - X-Xsrf-Token

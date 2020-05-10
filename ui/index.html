@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id"
+        content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link href="https://cdn.muicss.com/mui-0.10.2/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.muicss.com/mui-0.10.2/js/mui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+        pre{
+            background: #222F35;
+            color: #00fdff;
+            padding: 11px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- example content -->
+    <div class="mui-container">
+        <h1>String Boot Google Oauth Demo</h1>
+        <div class="mui-divider"></div>
+        <div class="mui-container mui-panel">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <h2>UI Data</h2>
+            <div id="profile-data"></div>
+            <h2>Backend Data</h2>
+            <pre id="backend-data" ></pre>
+        </div>
+    </div>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('Name: ' + profile);
+            document.getElementById("profile-data").innerHTML = "Welcome <strong><i>" + profile.getGivenName() + "</i></strong>, message from UI";
+            loadDoc(googleUser.getAuthResponse().id_token);
+        }
+        function loadDoc(idToken) {
+            axios.get('http://localhost:8090/protected/data', {
+                headers: {
+                    'Authorization': 'Bearer ' + idToken, 'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
+                    document.getElementById("backend-data").innerHTML = JSON.stringify(response.data, undefined, 2);;
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+        }
+    </script>
+</body>
+
+</html>
